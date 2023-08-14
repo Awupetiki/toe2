@@ -5,12 +5,12 @@ using UnityEngine.Tilemaps;
 
 public class MapScript : MonoBehaviour
 {
-    public Tilemap map;
+    private Tilemap map;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        map = GetComponent<Tilemap>();
     }
 
     // Update is called once per frame
