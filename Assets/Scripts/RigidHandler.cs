@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 
 public class RigidHandler : MonoBehaviour
@@ -8,6 +9,7 @@ public class RigidHandler : MonoBehaviour
     public bool buildingMode;
     public bool additionalMode;
     public Tilemap tilemap;
+    public UnityEvent beingStored;
     private Rigidbody2D _rb;
 
     // Start is called before the first frame update
