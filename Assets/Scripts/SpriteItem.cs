@@ -12,19 +12,31 @@ public class SpriteItem : MonoBehaviour, IPointerClickHandler
     public int containerId;
     public UnityEvent<int, SpriteItem> pressed;
     private Image _image;
-
-    private void Awake()
-    {
-        _image = GetComponent<Image>();
-    }
+    private bool _changedSprite;
+    private Sprite _targetSprite;
+    private bool _loadedImage;
 
     public void SetSprite(Sprite sprite)
     {
-        if (!_image) return;
-        
-        _image.sprite = sprite;
+        _changedSprite = false;
+        _targetSprite = sprite;
     }
-    
+
+    private void Update()
+    {
+        if (!_loadedImage)
+        {
+            _image = GetComponent<Image>();
+            _loadedImage = true;
+        }
+        
+        if (!_changedSprite)
+        {
+            _image.sprite = _targetSprite;
+            _changedSprite = true;
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("a");

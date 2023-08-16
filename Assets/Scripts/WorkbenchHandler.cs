@@ -53,20 +53,27 @@ public class WorkbenchHandler : RigidHandler
         var sprite = other.gameObject.GetComponent<SpriteRenderer>();
         if (sprite)
         {
-            var rigidHandler = other.gameObject.GetComponent<RigidHandler>();
-            if (rigidHandler)
-                rigidHandler.beingStored.Invoke();
+            other.transform.rotation = Quaternion.identity;
             
             int index = _items.Count;
             _items.Add(other.gameObject);
             int containerId = _storage.Push(other.gameObject);
+            
+            var rigidHandler = other.gameObject.GetComponent<RigidHandler>();
+            if (rigidHandler)
+                rigidHandler.beingStored.Invoke();
+
+            var rb = other.gameObject.GetComponent<Rigidbody2D>();
+            rb.angularVelocity = 0;
 
             var spriteItem = Instantiate(spriteItemPrefab, spriteGrid.transform, false);
             var itemComp = spriteItem.GetComponent<SpriteItem>();
-            itemComp.SetSprite(sprite.sprite);
+            
             itemComp.spriteId = index;
             itemComp.containerId = containerId;
             itemComp.pressed.AddListener(SpriteItemCallback);
+            
+            itemComp.SetSprite(sprite.sprite);
 
             storedItemCount++;
         }

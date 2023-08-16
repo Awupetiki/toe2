@@ -9304,34 +9304,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4062378239794745511, guid: cbdb8c4969f1c494baf198839bd0074b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4062378239794745511, guid: cbdb8c4969f1c494baf198839bd0074b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4062378239794745511, guid: cbdb8c4969f1c494baf198839bd0074b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4062378239920225071, guid: cbdb8c4969f1c494baf198839bd0074b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.000091552734
-      objectReference: {fileID: 0}
-    - target: {fileID: 4062378240206276445, guid: cbdb8c4969f1c494baf198839bd0074b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4062378240206276445, guid: cbdb8c4969f1c494baf198839bd0074b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4062378240206276445, guid: cbdb8c4969f1c494baf198839bd0074b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 4062378239598987812, guid: cbdb8c4969f1c494baf198839bd0074b, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 284241539}
     - target: {fileID: 7700651575025207553, guid: cbdb8c4969f1c494baf198839bd0074b, type: 3}
       propertyPath: m_Name
       value: Workbench
