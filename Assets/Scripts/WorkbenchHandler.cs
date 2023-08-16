@@ -42,7 +42,7 @@ public class WorkbenchHandler : RigidHandler
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (!other.rigidbody || Mathf.Abs(other.rigidbody.angularVelocity) < 16)
+        if (!other.rigidbody || Mathf.Abs(other.rigidbody.angularVelocity) < 24)
             return;
         
         Debug.Log(other.rigidbody.angularVelocity);
