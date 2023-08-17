@@ -20,7 +20,7 @@ public class CameraControls : MonoBehaviour
     private void Update()
     {
         _targetPosition +=
-            new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * (speed * Time.deltaTime);
+            new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * (speed * Time.deltaTime);
         _targetPosition.z = -10;
 
         var scrollDelta = Input.mouseScrollDelta.y;
