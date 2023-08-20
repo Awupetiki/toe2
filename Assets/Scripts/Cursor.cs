@@ -48,6 +48,9 @@ public class Cursor : MonoBehaviour
                 direction *= 7.5f;
 
                 contextRigid.velocity += direction;
+
+                //вращаем по аксе ротейт
+                contextRigid.angularVelocity += Input.GetAxisRaw("Rotate")*500f*Time.deltaTime;
             }
 
             // если лкм не зажато то бросаем тайл

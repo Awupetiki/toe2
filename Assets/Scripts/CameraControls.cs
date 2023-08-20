@@ -20,11 +20,11 @@ public class CameraControls : MonoBehaviour
     private void Update()
     {
         _targetPosition +=
-            new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * (speed * Time.deltaTime);
+            new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * (speed * (Camera.main.orthographicSize/4f) * Time.deltaTime);
         _targetPosition.z = -10;
 
         var scrollDelta = Input.mouseScrollDelta.y;
-        _targetZoom -= scrollDelta / 3;
+        _targetZoom -= scrollDelta / 2;
         if (_targetZoom < 1) _targetZoom = 1;
     }
 
