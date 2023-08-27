@@ -12,8 +12,10 @@ public class TileHandler : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D other)
     {
-        // скипаем если режим строительства выключен
-        if (!buildingMode) return;
+        // ретурним если режим строительства выключен
+        if (!buildingMode) {
+            return;
+        }
         
         // пробуем взять компонент тайлмапа
         var tilemapHandler = other.gameObject.GetComponent<TilemapHandler>();

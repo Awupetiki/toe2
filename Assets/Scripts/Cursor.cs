@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class Cursor : MonoBehaviour
 {
+    public GameObject[] crafts;
     private RigidHandler _currentRigidHandler;
     private Rigidbody2D _currentRigid;
     private TileHandler _currentTile;

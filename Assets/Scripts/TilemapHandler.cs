@@ -98,6 +98,9 @@ public class TilemapHandler : MonoBehaviour
         // и берём его в обдро- руки
         tileObject.AddComponent<TileHandler>();
 
+        // создаём Craft для крафта (логично :D)
+        tileObject.AddComponent<Craft>();
+
         // "ломаем" тайл на тайлмапе
         _tilemap.SetTile(tilemapPosition, null);
         return true;
